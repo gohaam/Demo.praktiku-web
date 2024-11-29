@@ -1,0 +1,158 @@
+.navbar-brand img{
+    border-radius: 50%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;  /* Initial state is transparent */
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Smooth transition when background color changes */
+}
+.navbar.scrolled {
+    background-color: rgb(139, 85, 8); /* Change to a darker color when scrolled */
+}
+
+
+.bg-blur {
+    z-index: 1;
+    min-height: 100vh;
+    background: rgba(54, 52, 52, 0.284);
+    /* Semi-transparent background */
+    backdrop-filter: blur(2px);
+    /* Apply blur */
+    font-family: 'Jost';
+    padding: 30px;
+    width: 50%;
+  }
+/* Profile image styles */
+.profile-pic {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    cursor: pointer; /* Makes the image clickable with a pointer cursor */
+}
+
+/* Hide the checkbox (it's used for controlling the dropdown visibility) */
+.profile-toggle {
+    display: none;
+}
+
+/* Remove default button styles */
+.profile-drop label {
+    display: inline-block;
+}
+
+/* Dropdown menu styling */
+.profile-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 30px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.profile-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Hover effect for the links */
+.profile-menu a:hover {
+    background-color: #ddd;
+}
+
+/* When the checkbox is checked, display the dropdown */
+.profile-toggle:checked + label + .profile-menu {
+    display: block; /* Show the menu when the checkbox is checked */
+}
+
+/* Container for profile section */
+.container-profile {
+    margin-top: 50px;
+    background-color: #D9D9D9;
+    min-height: 90vh;
+    border-radius: 20px;
+    position: relative; /* Make sure dropdown aligns with the profile picture */
+}
+
+
+.menu-roti {
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    counter-reset: book-counter; /* Initialize counter */
+  }
+  
+  .roti-cover{
+    position: relative;
+    text-align: center; 
+    width: 200px;
+  height: 300px;
+    padding: 20px;
+    border-radius: 8px;
+     /* Rounded corners */
+    
+  }
+  /* Initialize counter */
+.menu-roti {
+    counter-reset: book-counter; /* Reset counter for each list */
+}
+
+/* Style for the counter number */
+.menu-roti li {
+    position: relative;
+    list-style: none;
+}
+
+/* Initialize counter */
+ .menu-roti {
+    counter-reset: book-counter; /* Reset counter for each list */
+}
+
+/* Style for the list item */
+ .menu-roti li {
+    position: relative;
+    list-style: none;
+    counter-increment: book-counter; /* Increment counter for each list item */
+}
+
+/* Use ::before to display the number with leading zero for numbers < 10 */
+ .menu-roti li::before {
+    content: counter(book-counter, decimal-leading-zero); /* Add leading zero for numbers < 10 */
+    position: absolute;
+    top: -30px;
+    left: -25px;
+    font-size: 4rem;
+    color: #aaa;
+    z-index: -1;
+}
+
+
+  .roti-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .title {
+    font-size: 1rem; /* Title size */
+    font-weight: bold; /* Bold title */
+    margin: 5px ;
+  
+  }
+  
+  .harga {
+    font-size: 0.8rem; /* Author size */
+    color: #d54;
+   }
