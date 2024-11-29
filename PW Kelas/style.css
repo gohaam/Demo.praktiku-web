@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*,html{
+  font-family: 'Jost';
+}
+.welcome {
+  font-size: 15vh;
+  font-family: "Jost", sans-serif;
+  color: blue;
+}
+
+.bg-blur {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  /* Apply blur */
+  font-family: 'Jost';
+  padding: 30px;
+}
+
+.btn-login, .btn-register {
+  background-color: #d9d9d97d;
+  border: 2px solid white;
+  border-radius: 30px;
+  max-width: 70%;
+}
+
+.navigation {
+  background-color: transparent !important;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding-left: 30px;
+}
+
+.book-best, .book-fiksi, .book-current-read {
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  counter-reset: book-counter; /* Initialize counter */
+}
+
+.book-cover{
+  position: relative;
+  text-align: center; 
+  width: 200px;
+height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+   /* Rounded corners */
+  
+}
+
+.book-best li, .book-fiksi li {
+  counter-increment: book-counter; /* Increment the counter */
+}
+
+.book-best li::before, .book-fiksi li::before {
+  content: "0" counter(book-counter) " "; /* Display the counter before the book cover */
+  position: absolute; /* Position it absolutely */
+  top: -30px; /* Position number above the book */
+  left: -25px; /* Adjust left positioning */
+  font-size: 4rem; /* Number size */
+  color: #aaa;
+  z-index: -1; /* Light color for the number */
+}
+
+.book-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+  font-size: 1rem; /* Title size */
+  font-weight: bold; /* Bold title */
+  margin: 5px ;
+
+}
+
+.author {
+  font-size: 0.8rem; /* Author size */
+  color: #d54;
+ }
+
+.profile-pic{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+ overflow: hidden;
+}
+ .profile-drop button, .profile-drop button :hover{
+  background-color: transparent;
+  border: none;
+outline: none;
+box-shadow: none;
+border-radius: 50%;
+ }
+
+ .profile-drop button:focus, 
+ .profile-drop button:active {
+   outline: none;
+   box-shadow: none;
+ }
+
+ .profile-menu {
+  display: none;
+  position: absolute;
+
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.profile-menu a:hover {
+  background-color: #ddd;
+}
+
+.container-profile{
+  margin-top: 50px;
+  background-color: #D9D9D9;
+  min-height: 90vh;
+  border-radius: 20px;
+}
+
+/* */
+
+.main-profile{
+  color: white;
+  text-shadow: 2px 1px 15px white;
+  padding: 25px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #7E675E ;
+}
+.main-profile img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.container-notif{
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  min-height: 90vh;
+}
+
+.list-notification a{
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc
+}
+.list-inbox a{
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  box-shadow:3px 5px 10px #aaa;
+
+}
+
+.cont-library{
+  color: black;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  min-height: 90vh;
+}
+
+.header-library ul{
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.445);
+}
+
+.header-library{
+  padding: 3px;
+  border-top: 1px solid rgba(0, 0, 0, 0.393);
+  border-bottom: 1px solid  rgba(0, 0, 0, 0.393);
+}
+.header-library .active{
+  color: black;
+  font-weight: bold;
+}
+
+.inti{
+   
+  height: 100vh;
+  background-image: url(assets/Rectangle\ 3.png);
+}
